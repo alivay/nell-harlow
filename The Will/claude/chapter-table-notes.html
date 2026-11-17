@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Will: chapter table notes</title>
+<style>
+  :root {
+    --ink: #1d1d1f; --muted: #5f6368; --line: #d9dce1; --bg: #fbfaf7;
+    --head: #2b2f36; --part: #33415c;
+    --true: #eef6ee; --bel: #fff6e5; --cliff: #eaf1fb;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+  .wrap { max-width: 1500px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { font-size: 28px; margin: 0 0 4px; }
+  h2 { font-size: 19px; margin: 32px 0 8px; }
+  .sub { color: var(--muted); margin: 0 0 20px; }
+  .guide { background: #fff; border: 1px solid var(--line); border-radius: 8px;
+           padding: 14px 18px; margin: 0 0 22px; max-width: 920px; }
+  .guide p { margin: 0 0 10px; }
+  .guide dl { margin: 0; }
+  .guide dt { font-weight: 600; }
+  .guide dd { margin: 0 0 8px; }
+  .notes { max-width: 920px; }
+  .notes li { margin-bottom: 6px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; table-layout: fixed; }
+  th, td { border: 1px solid var(--line); padding: 8px 10px; vertical-align: top;
+           text-align: left; overflow-wrap: anywhere; }
+  thead th { position: sticky; top: 0; z-index: 2; background: var(--head); color: #fff;
+             font-size: 13px; font-weight: 600; }
+  tr.part td { background: var(--part); color: #fff; font-weight: 600; letter-spacing: .02em; }
+  td.n { font-weight: 700; text-align: center; font-variant-numeric: tabular-nums; }
+  td.t { font-weight: 600; }
+  td.true { background: var(--true); }
+  td.bel { background: var(--bel); }
+  td.cliff { background: var(--cliff); }
+  .new { display: inline-block; margin-top: 5px; padding: 1px 8px; border-radius: 10px;
+         background: #ffe3ad; color: #7a4b00; font-size: 11px; font-weight: 600; }
+  .done { display: inline-block; margin-top: 5px; padding: 1px 8px; border-radius: 10px;
+         background: #d5ecd5; color: #1e5b1e; font-size: 11px; font-weight: 600; }
+  .when { display: block; margin-top: 3px; font-size: 12px; font-weight: 400; color: var(--muted); }
+  .sus { width: 100%; max-width: 920px; }
+  .sus td, .sus th { font-size: 14px; }
+  @media (max-width: 980px) {
+    table.main, table.main tbody, table.main tr, table.main td { display: block; width: auto; }
+    table.main colgroup, table.main thead { display: none; }
+    table.main { background: transparent; }
+    table.main tr { margin: 0 0 14px; border: 1px solid var(--line); border-radius: 8px;
+         overflow: hidden; background: #fff; }
+    table.main td { border: 0; border-top: 1px solid var(--line); }
+    td.n { text-align: left; border-top: 0; padding-bottom: 0; }
+    td.t { border-top: 0; padding-top: 0; font-size: 17px; }
+    td::before { display: block; margin-bottom: 2px; font-size: 11px; font-weight: 700;
+                 text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+    td.n::before { content: "Chapter"; display: inline; margin-right: 6px; }
+    td.h::before { content: "What happens"; }
+    td.true::before { content: "What is really true"; }
+    td.bel::before { content: "What the reader believes"; }
+    td.clue::before { content: "Clue planted"; }
+    td.cliff::before { content: "The cliff"; }
+    tr.part td::before { content: none; }
+    tr.part { border: 0; border-radius: 8px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>The Will: notes to the chapter table</h1>
+<p class="sub">Split from <code>chapter-table.html</code> on 16 November 2026, because that file had grown too large. Who the reader suspects, the calendar, open questions, the numbers and the checks. Updated on 16 November after chapters 6 and 7. Checked on 17 November against chapters 1 to 7 as written.</p>
+
+<div class="notes">
+<h2>Who the reader suspects</h2>
+<p>For the murder of Amos, which the reader takes for a murder from the prologue on.</p>
+<table class="sus">
+<thead><tr><th>Chapters</th><th>Main suspect</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>Prologue</td><td>One of the three children</td><td>The voice says "Dad", feels relief, and walks away.</td></tr>
+<tr><td>1</td><td>The three children, and the Tanners</td><td>Sam names the dead man, and the reader recognizes the father from the prologue. The data center wants both farms or neither, and Amos refused, so his death frees Ruth's sale. Sam needs her money, and he is very helpful to the new heir.</td></tr>
+<tr><td>2 to 4</td><td>Julian, and the children</td><td>"Half the people in this room will tell you that man put him there." Then Colleen and Wade accuse each other through the door, and Wade found the body. Then the coalition. Sam is at the lawyer's door, "here for the news".</td></tr>
+<tr><td>6</td><td>Amos himself, as the man who may have killed his wife. And so his three children, who had forty years to hate him</td><td>Mrs. Hale packed to leave on 9 February and died in her bed on 8 February.</td></tr>
+<tr><td>7</td><td>Whoever Mrs. Pruitt is protecting, and Mrs. Pruitt herself</td><td>"I told the sheriff I saw nothing." Her window looks straight at the field. She lays a plate for the dead man.</td></tr>
+<tr><td>8 to 9</td><td>Wade</td><td>He found the body alone, with the engine still running. "You won't see the next harvest." He stands by the tractor in the morning.</td></tr>
+<tr><td>11</td><td>"One of those three"</td><td>Ruth says it outright.</td></tr>
+<tr><td>12 to 19</td><td>Julian</td><td>The truck at the fence, the remote, "I told him I could wait", the folder, the café with Colleen.</td></tr>
+<tr><td>21 to 22</td><td>Teddy, for the ghost only</td><td>He is caught, and he is too kind to be a killer. For now.</td></tr>
+<tr><td>26 to 27</td><td>Julian, for the test</td><td>Cleared by his own logic.</td></tr>
+<tr><td>31 to 36</td><td>Teddy</td><td>Mrs. Pruitt saw who came up the lane, Teddy heard her say it, and she dies.</td></tr>
+<tr><td>38 to 47</td><td>Still a Hale. Lang is "only" a blackmailer.</td><td>"This family does its own dying." He has an alibi for both deaths.</td></tr>
+<tr><td>48 to 50</td><td>Teddy, for a few pages</td><td>The eleven hours, then "You were there."</td></tr>
+<tr><td>50 to 51</td><td>Lang</td><td>The car on the lane, and the alibi built for the wrong hours.</td></tr>
+</tbody>
+</table>
+
+<p><strong>Test reader after chapter 1 (Kimi K3, 13 November):</strong> 1. Sam. 2. The prologue child, "probably framed". 3. Ruth. 4. Lang. The Tanners work as suspects. The prologue child is trusted less than planned, because the prologue points at him so openly. This reading was made on draft 1, where Sam still called Lang "straight".</p>
+
+<p><strong>Second test reader (GLM-5.3, draft 2):</strong> Sam 32%, Lang 18%, the Hale child not yet met 15%, Ruth 10%, the woman in the kitchen 8%, the prologue narrator 7%, the data center company 6%, Nora 4%. Lang is suspected only because he "controls the paper". This reader expects the Hale child who is kind to her at the reading to be the killer, which is what we want for Teddy in chapter 5.</p>
+
+<p><strong>Reading 6 (Kimi K3, after chapter 5, 16 November):</strong> first choice Wade, as the voice in the field; the data center man as planner; Lang last, and trusted. It predicts that she really is Carol's daughter and that the test will pass, which is the last twist of the book. It has not guessed the name, the sister, Teddy or Lang. Its copy was probably cut off before the chained door. See <code>test-readers.md</code>, Problems E and F.</p>
+
+<p><strong>Reading 7 (Kimi K3, the same text read to the end, 16 November):</strong> Lang is now first, as "the hidden antagonist", and the reader thinks he brought the wrong woman on purpose. The cause is the last line of chapter 5, "Mr. Lang is wrong". The guess that she is really the granddaughter has almost gone. It has not guessed that Lang killed, the name, the sister or Teddy. See <code>test-readers.md</code>, Problem G.</p>
+
+<p><strong>Reading 8 (Kimi K3, chapter 5 in draft 3, 16 November):</strong> the repair worked. First choice Wade, as the voice in the field; then the data center man, Colleen, Sam, Teddy. Lang is sixth of seven, and the reader trusts him and Teddy most. It has not guessed that Lang killed or planned, the name, the sister or Teddy. Two things to watch: it predicts that "someone wanted exactly this woman brought to Marlow", with no name on it yet, and it finds Lang "oddly rigid" about her sleeping in the house tonight. See <code>test-readers.md</code>, Problem H.</p>
+
+<h2>The calendar</h2>
+<p>The date of each chapter is in the "When" column of <code>chapter-table.html</code>. The book covers fourteen months. The will's year runs from 28 October to 29 October of the next year. The last night is about ten days later, in early November, on the day the judge signs the farm over to her. Use this for the weather, the light and the clothes in every chapter and every image. When a chapter starts after a gap, its first lines say so ("Three weeks later", "By March").</p>
+<table class="sus">
+<thead><tr><th>When</th><th>Chapters</th><th>Season, and what people wear</th></tr></thead>
+<tbody>
+<tr><td>Late September</td><td>Prologue</td><td>Early fall. Wet ground, the first field being plowed. A work jacket and a cap.</td></tr>
+<tr><td>27 October to November</td><td>1 to 14</td><td>Fall. Fields cut to stubble, brown and gray. Cold wind, dark by six. Coats and sweaters. June: the camel coat and the gray sweater. Farmers: canvas work coats and caps.</td></tr>
+<tr><td>December</td><td>15 to 22</td><td>Early winter. Frost, bare trees, first snow, dark by five. Heavy coats, gloves, hats. From chapter 20 June wears Amos's old barn coat.</td></tr>
+<tr><td>January to February</td><td>23 to 41</td><td>Deep winter. Snow on the fields, ice on the lane, the wood stove. Everybody is in boots and heavy coats. The funeral in chapter 36 is in the snow.</td></tr>
+<tr><td>March to April</td><td>42 to 45</td><td>Early spring. Mud, rain, the first green, calving. Work coats and rubber boots.</td></tr>
+<tr><td>June to August</td><td>46 and 47</td><td>Summer. Hot and humid, the corn is high, the days are long. Shirts and jeans, a cap. The barn coat only on cool mornings.</td></tr>
+<tr><td>September</td><td>48 to 52</td><td>Late summer into fall. Harvest starts, and Wade plows the river field. Light jackets.</td></tr>
+<tr><td>Early November, about ten days after 29 October</td><td>53 to 58</td><td>Fall again, almost the same weather as the day she came. Coats. Lang in his gray suit and overcoat. June in the barn coat.</td></tr>
+<tr><td>November to December</td><td>59 and 60</td><td>Late fall into winter. Coats.</td></tr>
+</tbody>
+</table>
+
+<h2>Open questions</h2>
+<ol>
+  <li><strong>Where are the Tanners cleared?</strong> They are now real suspects: the data center wants both farms or neither, and Amos refused. They need a moment later in the book that clears them. Also decide whether Ruth has signed an option with Julian.</li>
+  <li><strong>Mistress or granddaughter.</strong> The story file (B11) says the will was read to the children before June arrived and that they knew about "an unknown granddaughter". Chapter 3 has them think she was the mistress. Working answer, unless you change it: before the meeting the children know only that a woman called Nora Bell is named. They learn that she is a granddaughter from Lang, in the room.</li>
+  <li><strong>Sam after chapter 1.</strong> Two test readers made him their first suspect, so he cannot simply disappear. Written on 14 November: he waits at Lang's street door in chapter 3, and Lang sends him away. June thinks he is there for the news. Still open: how often he returns, and where he is cleared.</li>
+  <li><strong>Decided on 14 November: who wants to sell.</strong> Wade wants the farm kept. Teddy and Colleen need it sold. Chapter 3, draft 2, makes this clear in the brothers' quarrel.</li>
+  <li><strong>Decided on 15 November: where June hears the $80 million.</strong> Through the door in chapter 3, in the quarrel. She thinks it is the family's money.</li>
+  <li><strong>Decided on 15 November: the prologue gives no time of day.</strong> The reader takes it for the afternoon. Until chapter 48 June never says "morning" or "dawn" about the death.</li>
+    <li><strong>The calendar, proposed on 16 November.</strong> Three things to check. First: Mrs. Pruitt dies in late January, so Lang's fishing cabin is an ice-fishing trip, and the lane must be clear of snow on the night he drives in. Second: Wade's line in chapter 8 is said on 29 October, when this year's fields are already cut, so it is now "You won't see the next harvest." Third: the text of chapters 1 to 4 never names the month. Chapter 5 is the first to say October.</li>
+  <li><strong>Decided on 16 November: the rule of the year.</strong> Chapters 6 and 7 fix it. The will says in print that the heir shall sleep in the house "from the first night", so the hurry is Amos's and not Lang's. The days are June's. Every night she must be in the house before the chain goes on the front door at dark. Colleen has told Mrs. Pruitt to mark every night on the calendar in the kitchen, and a missed night goes to a judge. Nobody says how many missed nights a judge would forgive. Still to check: chapter 17, where she spends a night with Julian.</li>
+  <li><strong>Where Wade lives.</strong> Chapter 5, draft 2, says "two miles from the house", the same number as the lane. Proposed: he can see the porch from his kitchen. Put a small map in <code>places.md</code>.</li>
+  <li><strong>Sam after chapter 5.</strong> He now drives June to the farm and says he may stay longer than he planned. He knows she has the farm, but not why.</li>
+  <li><strong>Teddy's "vultures" line</strong> left chapter 5 with him. The natural place for it is his first visit to the kitchen, which is in chapter 9 for now.</li>
+  <li><strong>Decided on 16 November: Lang does not visit the farm in chapter 8.</strong> The reader should forget him. Two things from that visit need a new home. The allowance: it arrives by mail, in one line. The fishing cabin: somebody else must mention his monthly weekends there before chapter 32, because the cabin is his alibi.</li>
+  <li><strong>Decided on 16 November: how Lang gets into the house in chapter 33.</strong> The front door is on a chain at night. The cellar has a second way in: two slanted wooden doors outside, behind the house. Lang comes in through them and up the cellar stairs. The doors are not in the text yet: show them in chapter 8 or 9. Part 3 of the story file was changed on 17 November. New there: the door from the cellar into the kitchen is hooked on the kitchen side (chapter 7), so Mrs. Pruitt opens it herself when she hears somebody in her cellar, and Lang pulls her down from the top step. The same doors can be June's way in on a night when she comes home after the chain is on.</li>
+  <li><strong>Decided on 16 November: Mrs. Hale's story.</strong> It is written in the story file, part 1, section B1a. She had an infected tooth, Amos would not pay a dentist, and when he heard about her bus ticket he would not send for a doctor. She died on 8 February, forty-one years ago, one day before her bus. Wade was 14, Colleen 9 and Teddy 3. Ruth tells it in chapter 11: "He wouldn't pay forty dollars for her tooth, and he wouldn't pay forty dollars for that switch." Still open: her first name, and why she decided to leave that winter.</li>
+  <li><strong>16 November: chapter 6 became two chapters.</strong> Chapter 6 is the house, chapter 7 is the supper, and the old chapter 7 (Wade at the barn) is chapter 8. The old chapter 8 (the glasses) is no longer a chapter of its own, so the numbers from 9 on have not changed. On 17 November the old numbers were corrected in the notes of <code>chapter-03.md</code>, <code>chapter-05.md</code>, <code>the-will-prologue.md</code> and <code>wade-hale-look.md</code>. <code>test-readers.md</code> is a diary of old readings and keeps the numbers of its day; a note at its top explains them.</li>
+  <li><strong>To plan next: chapters 9 to 12, for the locked study.</strong> Mrs. Pruitt refuses to open the study, and June cannot read without her glasses. June asks Mrs. Pruitt for the key and gets it (see the item "how June gets into the study" below). What she finds in the diary, and in which order: the engine hours that Amos wrote every evening, the payments to "D.B.", and the line dated the night she arrived. Teddy's first visit to the kitchen (the furnace, his stories, "alarms and remote starters", the "vultures" line) needs a chapter. The number of chapters will grow, and every later chapter will be renumbered once, at that point.</li>
+  <li><strong>Decided on 16 November: the wrench.</strong> In the tractor's toolbox the place of the biggest wrench is empty (chapter 8). Lang hit Amos with it and dropped it into the old well, and the sheriff finds it there at the end (chapter 58). It is the one physical proof of the blow.</li>
+  <li><strong>Decided on 16 November: Mrs. Pruitt is about 80,</strong> small and frail, with a sharp mind and good ears. The story file said "about 70".</li>
+  <li><strong>Proposed for chapter 56: the telephone on the grate.</strong> Lang makes June sign in the study. The second telephone, the one that records him, can lie on the iron grate in the room above his head. In chapter 6 the grate let the house listen to her. In chapter 56 it lets her listen to him.</li>
+  <li><strong>Planted in chapter 6, with no pay-off yet:</strong> June does not know whether she talks in her sleep, and whoever sits in the study can hear her room. Use it, or let it go.</li>
+  <li><strong>17 November: do the chapter numbers have to shift?</strong> No. Chapter 6 became chapters 6 and 7, and the old chapter 7 (Wade at the barn) became chapter 8. The old chapter 8 (the glasses) gave its two events, the pipe smoke and the glasses, to the new chapter 8 and stopped being a chapter. So one chapter was added and one was taken away, and chapter 9 onward keep their numbers. Every cross-reference in the files was checked against this. The numbers will shift once, later, when chapters 9 to 18 are planned again for the locked study.</li>
+  <li><strong>Decided on 17 November: the pipe smoke in chapter 8 stays.</strong> Mrs. Pruitt has the only key, so the reader will guess she was in the study, and that is accepted. One thing in that plan still has to change: the plan has June leave her lamp on for Wade and see bars of light on her ceiling in the same night. With her lamp on she would not see them.</li>
+  <li><strong>Agreed on 16 November for chapter 8:</strong> Wade admits to his own public quarrel with his father a few days before the death, so that the prologue's threat fits him as well as Teddy (the Kimi K3 reading of chapters 1 to 7 put Teddy first). One line on why June is not tested against the three living children: such a test is weak, and the laboratory wants the grandfather's tissue. One sentence on why the land is worth eighty million: the whole river bend, the cooling water, the power line.</li>
+  <li><strong>Decided on 17 November: the phone signal.</strong> June's phone has no signal at the farmhouse (chapter 6). There is a signal at Ruth Tanner's place and under the power line by the river, and it comes and goes with the day. So on the last night Teddy can telephone the sheriff from the trees by the river field (chapters 52 and 57).</li>
+  <li><strong>Decided on 17 November: the night with Julian (chapter 17).</strong> June slips out after the chain is on, Julian is waiting for her, and she is back before morning. Mrs. Pruitt does not know, so the calendar shows no missed night.</li>
+  <li><strong>Corrected on 17 November: the date of the last night.</strong> The calendar put chapters 53 to 58 on 29 October. But the judge signs the farm over about ten days after the year ends, and Lang comes that evening. So the last night is in early November. June's letters arrive "on Monday", so the night should fall one to three days before a Monday.</li>
+  <li><strong>Corrected on 17 November: the letter and the photograph.</strong> The story file said in one place that Amos gave them to Lang, and in another that Lang took them from Amos's desk after the death. Now: Amos let Lang copy them, the originals stayed in the desk, and Lang took the originals when he listed the papers.</li>
+  <li><strong>Open: who counts June's nights after Mrs. Pruitt dies?</strong> And where does Julian's rented house stand, if there is nothing on the river road but Ruth's place and Hale Lane?</li>
+  <li><strong>Devised on 17 November: how June gets into the study.</strong> June does not steal the key. She asks for it, because her glasses are on Amos's desk and she cannot read without them. Mrs. Pruitt gives it to her at once, too easily. The room has been set out for her like a stage: her glasses lie folded on the open diary, and the diary is open at the line written the night before, "The girl came. She is not who she says." Mrs. Pruitt took the glasses so that June would have to go in and read that line. After that the rule is simple: the key lives in Mrs. Pruitt's apron, June must ask for it each time, and so the housekeeper always knows when June is in the study. This also covers chapters 24 and 28, where June sits in the study and searches it. Confirm it when chapters 9 to 18 are planned.</li>
+  <li><strong>Open: from which door did Mrs. Pruitt call "Mr. Hale?" in the prologue?</strong> The text says only that a screen door banged. The files say "the porch" in some places and "the kitchen door" in others. Proposed: the kitchen door, on the river side of the house, because she had just been at the kitchen window.</li>
+  <li><strong>Proposed after test readings and never done in the text. Aviel to decide:</strong> "four hours" from Indianapolis to Marlow becomes "three hours" (chapters 1 and 2; two readers found it long). Teddy does something else with his hands in chapter 3, because "hands in his pockets" matches the voice in the field. In the prologue the old woman is named as Mrs. Pruitt, "the house" becomes "his house", and it is said plainly that the tractor stands between her and the body.</li>
+  <li><strong>Decided on 13 November:</strong> chapter 1 stays one long chapter of about 2,150 words. It is not split.</li>
+</ol>
+
+<h2>The numbers</h2>
+<p>Sixty chapters of about 1,240 words make about 74,000 words. Your target is about 100,000 words in about 81 chapters. Chapter 1 is about 2,100 words. Written so far (17 November): the prologue and chapters 1 to 7 are 14,484 words. The seven chapters average about 1,980 words, and chapters 5 and 6 are over 2,600. That is above the aim of 1,200 to 1,500, so the book may reach its length with fewer than 81 chapters. These are the places where the book will grow naturally while you write:</p>
+<ul>
+  <li><strong>The haunting (chapters 9 to 18).</strong> More small events, one to a chapter, and the chapters of the locked study.</li>
+  <li><strong>Julian (chapters 12 to 17).</strong> One or two more meetings, each in a different place.</li>
+  <li><strong>The two weeks of waiting (chapters 20 to 22).</strong></li>
+  <li><strong>After the result (chapters 26 to 30).</strong> The coalition breaking, and Colleen's debts.</li>
+  <li><strong>The months of the bargain (chapters 41 to 47).</strong> The seasons on the farm, and Lang's telephone call each month.</li>
+  <li><strong>The investigation (chapter 58).</strong> This chapter holds too much and will certainly become two or three: the death, the three days in the cells, and the evidence.</li>
+</ul>
+
+<h2>Checks</h2>
+<ul>
+  <li>Every chapter ends on a cliff.</li>
+  <li><strong>Coalition:</strong> chapter 3 (written), and it breaks in chapter 26.</li>
+  <li><strong>Engine:</strong> the prologue, chapters 8, 9, 49 and 58.</li>
+  <li><strong>Exceed:</strong> chapter 4 (the will) and chapter 49 (the eleven hours).</li>
+  <li>The narrator never states a false thing. In Part One she hides her name, and she never claims it.</li>
+  <li>Places follow <code>places.md</code>: Marlow for daily life, Tolliver for the court.</li>
+</ul>
+</div>
+
+</div>
+</body>
+</html>

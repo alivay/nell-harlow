@@ -1,0 +1,670 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Will: chapter table</title>
+<style>
+  :root {
+    --ink: #1d1d1f; --muted: #5f6368; --line: #d9dce1; --bg: #fbfaf7;
+    --head: #2b2f36; --part: #33415c;
+    --true: #eef6ee; --bel: #fff6e5; --cliff: #eaf1fb;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+  .wrap { max-width: 1500px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { font-size: 28px; margin: 0 0 4px; }
+  h2 { font-size: 19px; margin: 32px 0 8px; }
+  .sub { color: var(--muted); margin: 0 0 20px; }
+  .guide { background: #fff; border: 1px solid var(--line); border-radius: 8px;
+           padding: 14px 18px; margin: 0 0 22px; max-width: 920px; }
+  .guide p { margin: 0 0 10px; }
+  .guide dl { margin: 0; }
+  .guide dt { font-weight: 600; }
+  .guide dd { margin: 0 0 8px; }
+  .notes { max-width: 920px; }
+  .notes li { margin-bottom: 6px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; table-layout: fixed; }
+  th, td { border: 1px solid var(--line); padding: 8px 10px; vertical-align: top;
+           text-align: left; overflow-wrap: anywhere; }
+  thead th { position: sticky; top: 0; z-index: 2; background: var(--head); color: #fff;
+             font-size: 13px; font-weight: 600; }
+  tr.part td { background: var(--part); color: #fff; font-weight: 600; letter-spacing: .02em; }
+  td.n { font-weight: 700; text-align: center; font-variant-numeric: tabular-nums; }
+  td.t { font-weight: 600; }
+  td.true { background: var(--true); }
+  td.bel { background: var(--bel); }
+  td.cliff { background: var(--cliff); }
+  .new { display: inline-block; margin-top: 5px; padding: 1px 8px; border-radius: 10px;
+         background: #ffe3ad; color: #7a4b00; font-size: 11px; font-weight: 600; }
+  .done { display: inline-block; margin-top: 5px; padding: 1px 8px; border-radius: 10px;
+         background: #d5ecd5; color: #1e5b1e; font-size: 11px; font-weight: 600; }
+  td.w { font-size: 13px; font-weight: 600; color: #7a4b00; background: #fff8ea; }
+  .sus { width: 100%; max-width: 920px; }
+  .sus td, .sus th { font-size: 14px; }
+  @media (max-width: 980px) {
+    table.main, table.main tbody, table.main tr, table.main td { display: block; width: auto; }
+    table.main colgroup, table.main thead { display: none; }
+    table.main { background: transparent; }
+    table.main tr { margin: 0 0 14px; border: 1px solid var(--line); border-radius: 8px;
+         overflow: hidden; background: #fff; }
+    table.main td { border: 0; border-top: 1px solid var(--line); }
+    td.n { text-align: left; border-top: 0; padding-bottom: 0; }
+    td.t { border-top: 0; padding-top: 0; font-size: 17px; }
+    td::before { display: block; margin-bottom: 2px; font-size: 11px; font-weight: 700;
+                 text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+    td.n::before { content: "Chapter"; display: inline; margin-right: 6px; }
+    td.w::before { content: "When"; }
+    td.h::before { content: "What happens"; }
+    td.true::before { content: "What is really true"; }
+    td.bel::before { content: "What the reader believes"; }
+    td.clue::before { content: "Clue planted"; }
+    td.cliff::before { content: "The cliff"; }
+    tr.part td::before { content: none; }
+    tr.part { border: 0; border-radius: 8px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>The Will: chapter table</h1>
+<p class="sub">Built from version 5 of the story. Updated 16 November 2026: the second column, "When", gives the date of every chapter, and rows 4 to 7 follow the written chapters. Row 8 follows the plan agreed on 16 November, and row 9 is waiting to be planned again. Checked on 17 November 2026 against chapters 1 to 7 as written. A prologue and 60 chapters. Chapters aim at 1,200 to 1,500 words.</p>
+
+<div class="guide">
+  <p>This is the working plan of the book. Each row is one chapter.</p>
+  <dl>
+    <dt>What happens</dt>
+    <dd>What is on the page, as the narrator tells it.</dd>
+    <dt>What is really true</dt>
+    <dd>What only you, the author, know at that point.</dd>
+    <dt>What the reader believes</dt>
+    <dd>The idea the chapter leaves in the reader's mind. It is often wrong, and that is intended.</dd>
+    <dt>Clue planted</dt>
+    <dd>The honest detail that a second reading will find. It keeps the book fair.</dd>
+    <dt>The cliff</dt>
+    <dd>The last line or last event of the chapter, which makes the reader start the next one.</dd>
+  </dl>
+  <p>Rows marked <span class="done">written</span> follow the finished text. Rows marked <span class="new">added scene</span> are small scenes added while dividing the story into chapters. None of them is a new twist.</p>
+  <p><strong>New since 13 November:</strong> Sam Tanner, Ruth's grandson, sits beside June on the bus in chapter 1. He changes chapters 2, 3, 11 and 31.</p>
+  <p><strong>New on 16 November:</strong> the second column, "When", gives the date of every chapter. The book runs from late September to December of the next year. See "The calendar" in <code>chapter-table-notes.html</code>. Chapter 5 is rewritten: the end of the meeting, Sam's ride, and the chained door. Draft 3 answers the test readings 6 and 7.</p>
+  <p><strong>New on 16 November, later:</strong> the old chapter 6 is now two chapters, and both are written. Chapter 6 is the house and chapter 7 is the supper. Each chapter has one thing the reader learns, marked in bold in "What happens": the packed suitcase in chapter 6, "I told the sheriff I saw nothing" in chapter 7, and Wade's account of finding the body in chapter 8. The old chapter 7 (Wade at the barn) is now chapter 8. The old chapter 8 (the glasses) is no longer a chapter of its own: the pipe smoke and the glasses moved into chapter 8, and Teddy's first visit waits in row 9. So the numbers from 9 on have not changed. Chapters 9 to 12 must be planned again for the locked study, and the later chapters will be renumbered then. Lang no longer visits the farm, and "You are not how I expected" is out.</p>
+  <p><strong>New on 14 November:</strong> rows 2 and 3 now follow the written chapters. The reading of the will has moved from chapter 3 to chapter 4. Chapter 3 ends on Wade's threat to investigate her.</p>
+  <p><strong>Checked on 17 November:</strong> the chapter numbers do not shift. Chapter 6 became chapters 6 and 7, Wade's scene became chapter 8, and the old chapter 8 (the glasses) was taken into the new chapter 8. Rows 9 to 18 still follow the old plan. They will be planned again for the locked study, and the numbers after them shift once at that point. The last night (rows 53 to 58) is in early November, about ten days after June's year ends on 29 October.</p>
+</div>
+
+<table class="main">
+<colgroup>
+  <col style="width:3%"><col style="width:8%"><col style="width:9%"><col style="width:24%">
+  <col style="width:17%"><col style="width:14%"><col style="width:12.5%"><col style="width:12.5%">
+</colgroup>
+<thead>
+<tr><th>#</th><th>When</th><th>Chapter</th><th>What happens</th><th>What is really true</th><th>What the reader believes</th><th>Clue planted</th><th>The cliff</th></tr>
+</thead>
+<tbody>
+
+<tr class="part"><td colspan="8">PROLOGUE &middot; an unnamed voice</td></tr>
+<tr>
+<td class="n">P</td><td class="w">Late September, the day Amos died</td>
+<td class="t">The river field<br><span class="done">written</span></td>
+<td class="h">An unnamed "I" stands in a wet field and looks at his father, who lies under his tractor with the engine still running. The narrator feels sick, and also relieved, and remembers the threat shouted in front of half the county the night before. An old woman calls "Mr. Hale?" from the porch. The narrator touches nothing and walks back to the car.</td>
+<td class="true">The voice is Teddy. He only found his father. Lang had killed Amos a few minutes earlier and passed Teddy's car on the lane. Mrs. Pruitt took Teddy for Amos. It is dawn, but the text never says so (draft 4).</td>
+<td class="bel">One of Amos's children killed him, or stood over him and left him to die. It seems to happen in the afternoon, shortly before he was found.</td>
+<td class="clue">The engine is running. One plowed strip. No time of day is given. The narrator never says "I found him" and never says "I killed him".</td>
+<td class="cliff">"I leave the engine running. I walk back to the car in my own footprints."</td>
+</tr>
+<tr class="part"><td colspan="8">PART ONE: "NORA" &middot; chapters 1 to 24 &middot; June's voice</td></tr>
+<tr>
+<td class="n">1</td><td class="w">Tue 27 October, late afternoon</td>
+<td class="t">The name on the envelope<br><span class="done">written</span></td>
+<td class="h">Four weeks after the death. On the last hours of the bus to Marlow, June talks with Sam Tanner, a charming, broke man going to visit his grandmother, the Hales' old neighbor. The data center company wants her farm and the Hale farm together or not at all, and Amos would not sell. June wants a few thousand dollars and is sure free money does not exist. Sam works out that her dead man is Amos Hale. She tells him truthfully that she never heard the name before the letter. He looks at her and decides she must have been the old man's woman. At the gas station his grandmother stares at June from an old Buick. At the motel the room is billed to the estate.</td>
+<td class="true">She is June Mercer, living under the dead Nora's name. Sam is only what he seems: a grandson keeping his place in a will. The Tanners gain from the death and had no part in it. Ruth stares because she sees Amos in June's face.</td>
+<td class="bel">The dead man is the father from the prologue, so his death was no accident. Suspects: one of his three children, or the Tanners, whose sale Amos was blocking. Lang is a boring man who reads wills aloud. June is hiding something, and the town already thinks she was the old man's woman.</td>
+<td class="clue">"The name on the envelope." She is slow to answer to "Nora". "I never heard his name until the letter came." The cologne her old boss wore. "I learned that the expensive way." Ruth's long look.</td>
+<td class="cliff">The clerk reads the billing line: "Hale. So you're the one." He will not say what he means, and his pen stops moving.</td>
+</tr>
+<tr>
+<td class="n">2</td><td class="w">Tue 27 October, 7 in the evening</td>
+<td class="t">The diner<br><span class="done">written</span></td>
+<td class="h">At seven she goes out for food. The grocery is closed, so she goes to Lottie's diner. The room goes quiet when she walks in. She has forty-one dollars and orders the cheapest thing on the wall. There are not enough tables, so she sits with two old men. A good-looking stranger joins her, says he is not from here either, and makes her laugh once. He tells her that a farmer named Hale died under his tractor a month ago, that the sheriff wrote down an accident, and that nobody in the room believes it. He asks her nothing, not even her name, and pays her check on his way out.</td>
+<td class="true">Julian knew who she was and sat with her on purpose. He wants the land and nothing more. The town stares because it was expecting her: the county already knows that a stranger is named in Amos's will.</td>
+<td class="bel">She has found one friendly face. A moment later: perhaps the man who killed Amos.</td>
+<td class="clue">Unlike Sam, he asks her nothing at all. "The two least welcome people in the county", said to a woman who got off a bus an hour ago. He knows a great deal for a stranger.</td>
+<td class="cliff">Pat: "That's the data center man. Half the people in this room will tell you that man put him there." The whole room watched her laugh with him. "He wasn't being polite. He already knew."</td>
+</tr>
+<tr>
+<td class="n">3</td><td class="w">Wed 28 October, 10 in the morning</td>
+<td class="t">The coalition<br><span class="done">written</span></td>
+<td class="h">Ten to ten in the morning. Marlow is empty. Sam is waiting at Lang's street door to walk her in. June decides he is there for the news. Lang sends him away. In the small elevator Lang makes tired small talk: "Did you have a good flight?" Through the door Colleen and Wade are shouting. She asks if he wants to kill her too, says he was promised the farm for forty years, and says he found the body. He says he is the only one who wanted it kept, and that she came home twice in one week once a stranger offered eighty million dollars. June hears the number. Teddy jokes that they can be heard in Tolliver. The door opens: Wade sleepless, Colleen perfect but for a bitten thumbnail, Teddy rested by the window. Wade tells Lang she was their father's mistress. Colleen agrees. Teddy asks them to calm down.</td>
+<td class="true">Lang knows everything about her. He keeps Sam out on purpose. Wade found his father ten hours after Teddy did. Colleen came home to push her father to sell. Teddy looks rested because he drinks and has taught himself not to think about that day.</td>
+<td class="bel">Wade wants the farm kept. Colleen and Teddy want it sold. Any one of them could be the voice in the field. Wade, who found the body, is the first choice. Colleen was near the farm that week. Teddy is the kind one. June has a past that will not survive a detective.</td>
+<td class="clue">"Did you have a good flight?" from the man who mailed the bus ticket. The green safe. Lang stops with his hand on his chair when Wade promises to dig. Teddy's joke: "Then you two can kill each other in the parking lot."</td>
+<td class="cliff">Wade: "I'll dig until I hit the bottom of her, and then I'll see her out of this county." He looks at her for the first time. June: "It's the digging I can't afford."</td>
+</tr>
+<tr>
+<td class="n">4</td><td class="w">Wed 28 October, morning</td>
+<td class="t">Blood<br><span class="done">written</span></td>
+<td class="h">Lang ignores Wade and reads the will: everything goes to "the living child of my daughter, Carol Bell", if she lives on the farm for a period exceeding one year. Lang says it aloud: she was not the mistress, she is the granddaughter. The children ask for ten minutes alone. On a bench in the hallway Lang tells June that he is not her lawyer and cannot advise her. The eighty million is not in the will; it is the company's offer. June asks how he found her: an investigator, three weeks. He asks why she never visited her grandfather. She invents two visits, and tells the reader it is a lie. He says he saw Amos at first light on the day he died, with crop insurance forms to sign, and was then in court all day. Back in the room Wade asks, for all three, for a DNA test.</td>
+<td class="true">The will is genuine. Lang knows that this woman is not Nora, and he wants her to inherit. He knows her story of two visits is false. He is describing the minute of the murder, and his own alibi. June understands that Nora was this man's granddaughter and never said so.</td>
+<td class="bel">A dead farmer has cut out his own children for a granddaughter nobody knew. Lang is a correct official. June is poor, out of her depth, and not sure she is the granddaughter at all.</td>
+<td class="clue">The will names the heir by blood and not by name. The words "exceeding one year". "I saw Mr. Hale at first light on the day he died." Then: in court all day. "Nobody ever told me any of this." The lie about two visits.</td>
+<td class="cliff">Wade: "We want a DNA test. If she's really Dad's granddaughter, let her prove it." June: "One test, and it's all gone. There is no free money."</td>
+</tr>
+<tr>
+<td class="n">5</td><td class="w">Wed 28 October, 10:30 to noon</td>
+<td class="t">The form, and the locked door<br><span class="done">written</span></td>
+<td class="h">Lang cannot ask for the test, but he tells the children how to get it: a lawyer, the judge in Tolliver, weeks or months. He says he advised Amos against this will, and that it was signed on 14 May. Colleen goes quiet at "May". He reads one more line: the year begins on the day the will is read, so she sleeps in the house tonight. Then he puts a renunciation form and his pen in front of June: one signature, and the farm goes to the children. He mocks her job and says he could close the file by Christmas. June pushes the form back. Lang says openly that he will telephone Mrs. Pruitt, the housekeeper. Sam drives her out in Ruth's Buick, learns that she has the farm, asks whether she would sell, tells her that Teddy told the tavern she was coming, and names Julian Cross. At the farmhouse a chained door opens three inches.</td>
+<td class="true">Lang needs her on the farm. He offers the form because he knows that a woman with forty dollars will not sign it in front of three people who despise her. Sam needs to know whether she will sell. Mrs. Pruitt sees at first sight that this is not the girl in the photograph.</td>
+<td class="bel">The lawyer sides with the family and would like her gone. June thinks somebody has made a mistake and means to live on it while it lasts. Sam is too interested. The housekeeper is a jealous old servant.</td>
+<td class="clue">The renunciation form (chapter 38). "I advised him against it." "I can close this file by Christmas." Colleen and "May". "A man was paid to find a woman, and he found one." The eye stops at her dark roots. One plowed strip.</td>
+<td class="cliff">"Mr. Lang telephoned. He says I'm to give you a bed. He didn't say tonight." The door shuts and the lock turns. She must sleep in that house tonight or lose the farm.</td>
+</tr>
+<tr>
+<td class="n">6</td><td class="w">Wed 28 October, noon to early afternoon</td>
+<td class="t">One way<br><span class="done">written</span></td>
+<td class="h">June is locked out on the porch. She puts on her reading glasses and reads two paragraphs of the will aloud through the door: one keeps Mrs. Pruitt's room and wages "for as long as she keeps the said house", and one says the heir shall sleep in the house "from the first night". A housekeeper who locks the heir out is breaking the will and can lose her place. The door opens. Mrs. Pruitt is close to eighty, tiny, with shaking hands and a ring of keys in her apron. The house: a narrow hallway, a living room under white sheets, and one locked door, Amos's study. On the stairs the ninth step cracks like a gunshot, and Mrs. Pruitt steps over it. No bedroom has a key. June gets the narrow room where Mrs. Hale died on 8 February, forty-one years ago. In its floor an iron grate looks down into the locked study. <strong>The one thing we learn:</strong> under the bed is Mrs. Hale's suitcase, packed, with one pair of a little boy's shoes and an unused one-way bus ticket for 9 February of that year. <strong>Draft 4 adds:</strong> June's cheap prepaid phone shows NO SERVICE on the farm, so the black telephone that Mrs. Pruitt answers is the only line out. And at the door June sees her mistake: this woman has kept the house for forty years and knows that no girl ever visited, so the lawyer only has to ask her.</td>
+<td class="true">Mrs. Hale was leaving Amos and taking Teddy, who was three. She had an infected tooth, Amos would not pay a dentist, and when he heard about the ticket he would not send for a doctor. Mrs. Pruitt has known about the suitcase for forty years, and she gives June that room on purpose. She knows from the photograph that this is not the girl who wrote to Mr. Hale.</td>
+<td class="bel">Amos's wife tried to run away from him and died one day before her bus. Perhaps he killed her. His children had forty years to hate him. The housekeeper is hostile and strange, and the house was built for watching people.</td>
+<td class="clue">The ticket and the little shoes. The grate: whoever is in the study can hear June's room. The bare corner of the desk. The ninth step, and who knows to step over it. One lock in the house, and one key. The barn coat on the hook. June's reading glasses. "Keys in somebody else's pocket." No signal at the farmhouse. "She knows no girl ever came."</td>
+<td class="cliff">"Mrs. Hale packed a bag, and she bought a ticket out of this house for the ninth of February. On the eighth, she died in this bed."</td>
+</tr>
+<tr>
+<td class="n">7</td><td class="w">Wed 28 October, six in the evening</td>
+<td class="t">The second plate<br><span class="done">written</span></td>
+<td class="h">June comes down to supper and steps over the ninth step. Mrs. Pruitt hears her anyway. Colleen has telephoned: Mrs. Pruitt is to mark on the kitchen calendar every night that June sleeps in the house. So the days are June's, and every night she must be inside before the chain goes on. Mrs. Pruitt keeps the cellar door shut with a hook. The cellar stairs are as steep as a ladder and have no rail, and she goes down them quickly, in the dark. <strong>The one thing we learn:</strong> the kitchen window looks straight at the river field, and Mrs. Pruitt says: "Mr. Wade found him. I told the sheriff I saw nothing." June is afraid of the food, thinks it through, and eats. Mrs. Pruitt asks whether she found everything in her room. A second place is laid at the head of the table. June asks why she lays a place for a man she did not like, and decides that the plate is a show, put on for her.</td>
+<td class="true">Mrs. Pruitt saw Lang's car, and then Teddy's car and a figure by the tractor, which she took for Amos. She kept quiet for love of Teddy. The plate is her first trick to frighten June out of the house. The bed and the suitcase were the same message.</td>
+<td class="bel">The housekeeper saw something on the day Amos died, and she is protecting somebody, probably one of the children. She is putting on a show to drive June away. She may be a little mad, and she may be dangerous.</td>
+<td class="clue">"I told the sheriff I saw nothing." A person, not a face. She is slow everywhere and quick on the cellar stairs. "They would kill a person who didn't know them." The hook on the cellar door. "I write down what is so." "Nobody asked me to like him." Her ears are as good as her eyes.</td>
+<td class="cliff">"Mrs. Hale died in the bed you're going to sleep in tonight. This was their house. It still is." Then: "Do you believe the dead know who is sleeping in their beds?"</td>
+</tr>
+<tr>
+<td class="n">8</td><td class="w">Wed 28 October, night, and Thu 29 October</td>
+<td class="t">The light under the floor<br><span class="new">planned</span></td>
+<td class="h">June puts her glasses on the table by the bed and leaves the lamp on, so that Wade can see it. In the night she wakes and sees bars of light on her ceiling. They come up through the grate: a lamp is burning in the locked study. She smells pipe smoke, and only Amos smoked a pipe. She hears slow steps and a pen. The light goes out and a key turns. In the morning the study is locked, and through the grate she sees a pipe on the corner of the desk, which was bare the day before. Mrs. Pruitt: "Then you heard Mr. Hale." From her window June sees the river field and the old well. She meets Wade at the barn. He is the estate's paid manager, and she cannot send him away. <strong>The one thing we learn:</strong> Wade tells her how he found his father: alone, at four in the afternoon, under the wheel, with the engine still running. In the tractor's toolbox the place of the biggest wrench is empty. Wade: "You won't see the next harvest." Lang does not come to the farm. <strong>Still to settle:</strong> June cannot both leave her lamp on and see the light on her ceiling. <strong>Agreed additions:</strong> Wade admits to his own public quarrel with his father a few days before the death; one line on why June is not tested against the three living children; one sentence on why the land is worth eighty million dollars.</td>
+<td class="true">Mrs. Pruitt sat in the study that night. She wrote the day's line in the farm diary, in Amos's handwriting: "The girl came. She is not who she says." She burned his tobacco for June to smell. While June is at the barn, she climbs the stairs and takes the glasses. Wade is grieving. The engine had been running since dawn. Lang hit Amos with the wrench and dropped it into the old well.</td>
+<td class="bel">Somebody sits in the locked room at night. The housekeeper has the only key, but she looks too slow and too weak. Wade is the dangerous one: he found the body alone, and he wants her gone. Amos died in the afternoon.</td>
+<td class="clue">"The engine was still running." The empty place of the wrench. The pipe on the desk. The diary line is written on this night. The ninth step makes no sound.</td>
+<td class="cliff">Back in her room, her glasses are gone from the table. Through the grate she sees them on Amos's desk, in the locked room.</td>
+</tr>
+<tr>
+<td class="n">9</td><td class="w">Early November, 3 in the morning</td>
+<td class="t">Three in the morning<br><span class="new">to be planned again</span></td>
+<td class="h">(Until chapters 9 to 12 are planned again for the locked study, this row also holds what is left of the old chapter 8.) June cannot read without her glasses. (Devised on 17 November: she asks Mrs. Pruitt for the key to the study and gets it, too easily. Her glasses lie on the open diary. See the notes file.) Teddy comes to the kitchen with food, mends the furnace and tells funny stories about his father. He says: "Dad always swore he would never leave this place. Wade thinks he hasn't." That night June wakes to the sound of the tractor. From her window she sees it in the river field, where Amos died: lights on, engine running, nobody in the seat. After ten minutes it stops. In the morning it is cold, and Wade is standing beside it.</td>
+<td class="true">Teddy started it with a remote control from the trees. He is repeating what he saw on the morning he found his father. He is also studying the house, and her.</td>
+<td class="bel">Someone is playing ghost, and Wade is the obvious man. Teddy is the kind one.</td>
+<td class="clue">The scene is exact: the lights, the engine, the empty seat, in that field. Whoever does this knows how the death looked at dawn. Teddy mentions his failed garage: "I used to fit alarms and remote starters." Still to be placed: the payments to "D.B." in the diary.</td>
+<td class="cliff">Wade, without turning round: "Sleep well?"</td>
+</tr>
+<tr>
+<td class="n">10</td><td class="w">Mid-November</td>
+<td class="t">Ghosts don't burn diesel</td>
+<td class="h">June answers like a bookkeeper. She starts keeping Amos's diary herself. Every morning she writes down the fuel and the number on the tractor's hour meter. After a "ghost" night both have changed, so a living person is doing this. One morning her suitcase stands packed by the front door.</td>
+<td class="true">Her habit of writing down the engine hours is the habit that will expose the murder. Mrs. Pruitt packed the suitcase.</td>
+<td class="bel">She is clever, and she will catch one of the children.</td>
+<td class="clue">The hour meter is explained. Amos wrote the engine hours in the diary every evening.</td>
+<td class="cliff">A new line in the diary, in the dead man's handwriting: "The girl came. She is not who she says."</td>
+</tr>
+<tr>
+<td class="n">11</td><td class="w">Mid-November</td>
+<td class="t">The neighbour</td>
+<td class="h">Ruth Tanner, the old woman from the Buick, invites her for coffee. She has heard Sam's version and wants to see for herself. She tells the old story: the pretty hired girl, Dot Bell, who left suddenly one summer. June now understands the payments to "D.B." Ruth laughs that Amos counted every drop of diesel and wrote down the tractor's hours every night, "like a miser counting his coins".</td>
+<td class="true">All of it is true. Ruth also sees a family likeness in June, and the likeness is real. It is why she stared at the gas station.</td>
+<td class="bel">The granddaughter story is confirmed. The line in the diary is spite.</td>
+<td class="clue">Ruth: "You have his stubborn jaw, God help you." June thinks: people see what a will tells them to see.</td>
+<td class="cliff">Ruth: "They call it an accident. Amos Hale never fell off anything in his life. If you ask me, one of those three lost patience."</td>
+</tr>
+<tr>
+<td class="n">12</td><td class="w">Late November, night</td>
+<td class="t">The fence</td>
+<td class="h">The engine runs again in the night. This time June walks out to the field with a torch. On the county road beside the fence stands a truck with its lights off. It is Julian. He says his company has rented the house next door for him, and he could not sleep.</td>
+<td class="true">It is the truth. He lives there, and he saw the lights.</td>
+<td class="bel">Julian is behind the ghost, or he knows who is.</td>
+<td class="clue">He is not surprised by a tractor that runs by itself.</td>
+<td class="cliff">Julian: "Old farms make noises. Have dinner with me on Friday and I'll tell you how it's done."</td>
+</tr>
+<tr>
+<td class="n">13</td><td class="w">Late November</td>
+<td class="t">A steel door</td>
+<td class="h">June cannot sleep, and she tells the reader her secret: she spent three years in prison. She tells the whole story of her boss, the false suppliers, and the forms she signed without reading. In the morning her suitcase is packed by the door again.</td>
+<td class="true">The prison story is true. It is the smaller secret, and it hides the bigger one.</td>
+<td class="bel">This is what she is hiding from the family: a prison record.</td>
+<td class="clue">"I learned in there never to think about the thing I cannot afford to say." Her boss wore the cologne from the bus.</td>
+<td class="cliff">Colleen's car is in the yard. Colleen is holding a folder: "I have had you investigated, Miss Bell."</td>
+</tr>
+<tr>
+<td class="n">14</td><td class="w">Late November</td>
+<td class="t">Nothing</td>
+<td class="h">Colleen's detective has found nothing against "Nora Bell": no husband, no criminal record, not even a parking fine. Colleen is furious, and says her lawyer has asked the court to order a blood test. June lets out a breath.</td>
+<td class="true">He found no prison record because he investigated Nora. It was June who went to prison.</td>
+<td class="bel">The detective was careless, and she has been lucky.</td>
+<td class="clue">A clean report, one chapter after she told us about three years in prison.</td>
+<td class="cliff">That night she hears metal in the river field. She finds Wade at the tractor at two in the morning, with the engine cover open and a torch in his hand.</td>
+</tr>
+<tr>
+<td class="n">15</td><td class="w">Early December</td>
+<td class="t">Wade</td>
+<td class="h">She accuses him. He is furious: "You think I would play ghost with the tractor that killed my father?" He has heard the engine too, and came to disconnect the battery. He parks the tractor in gear every night, because the brake is useless and his father joined the wires around the safety switch. Each morning after a ghost night he finds it out of gear.</td>
+<td class="true">Every word is true. Teddy takes it out of gear each evening.</td>
+<td class="bel">He is lying. He has the keys, the skill and the hatred.</td>
+<td class="clue">"If that fool ever forgets and starts her in gear, she'll walk straight over him."</td>
+<td class="cliff">On Thursday Wade leaves for a cattle sale, two counties away. On Thursday night the engine runs.</td>
+</tr>
+<tr>
+<td class="n">16</td><td class="w">Early December, a Friday</td>
+<td class="t">Friday</td>
+<td class="h">Dinner with Julian in Vincennes. He is the first person in six years to ask about her life. She lies to him easily, and hates it. He tells her what Amos said to him: "You'll get this land over my dead body." Julian answered that he could wait.</td>
+<td class="true">He came after her on purpose, for the land. He has broken no law.</td>
+<td class="bel">He is charming, and he had the best reason of anyone to want Amos dead.</td>
+<td class="clue">"I told him I could wait."</td>
+<td class="cliff">He takes a small remote control from his pocket and presses it. Outside the window his empty truck starts by itself. "Sixty dollars. Anyone can make a ghost."</td>
+</tr>
+<tr>
+<td class="n">17</td><td class="w">Early December, the next morning</td>
+<td class="t">The folder</td>
+<td class="h">She spends the night with him. (Decided on 17 November: she slipped out after the chain went on the door, and she is back in the house before Mrs. Pruitt is up, so no night is missed on the calendar.) Before she leaves, while he showers, she sees a folder in his bag. It holds maps of the Hale farm with buildings drawn on them, a page about her, and a letter from his company to Amos.</td>
+<td class="true">It is ordinary business research. "Other avenues" meant other land.</td>
+<td class="bel">Julian planned all this before Amos was dead. He may have killed him.</td>
+<td class="clue">The date on the maps is before Amos's death. The letter, two weeks before the death: "We will pursue other avenues."</td>
+<td class="cliff">The page about her: "N. Bell. No family. No savings. Rents a room. Will accept a low offer." She leaves without waking him.</td>
+</tr>
+<tr>
+<td class="n">18</td><td class="w">Mid-December</td>
+<td class="t">The handwriting</td>
+<td class="h">June stays awake and catches Mrs. Pruitt at Amos's desk, writing in the diary in his handwriting. Mrs. Pruitt explains that she wrote the diary for him for years, because of his eyes. She admits the glasses, the smoke and the suitcase: "I want you out of this house." She swears she never touched the tractor. She cannot drive.</td>
+<td class="true">She is telling the truth about everything, including the line in the diary.</td>
+<td class="bel">The house is explained: a jealous old servant. The tractor is someone else.</td>
+<td class="clue">"I know who belongs in this house." She has a reason that she is not giving.</td>
+<td class="cliff">"I know what I know. The doctors will say what you are soon enough."</td>
+</tr>
+<tr>
+<td class="n">19</td><td class="w">Mid-December</td>
+<td class="t">Open your mouth</td>
+<td class="h">In Tolliver for the court hearing, June sees Julian in a café with Colleen. Colleen is signing papers. In court the judge orders the test. Lang says only: "The executor takes no position." A court nurse is waiting in the next room and takes the sample at once, with a cotton stick inside June's cheek. It will be compared with a piece of tissue the hospital kept from an operation of Amos's.</td>
+<td class="true">Colleen was signing her option with Julian's company. Lang has already paid a man at the laboratory to make the answer yes. June meant to run before any test, and there was no time.</td>
+<td class="bel">Julian and Colleen are working together. The test will settle everything, and she seems strangely afraid of it.</td>
+<td class="clue">Lang has no part in the test. Nobody sees him near it.</td>
+<td class="cliff">The judge: "Two weeks." June: "I have two weeks left of being anybody at all."</td>
+</tr>
+<tr>
+<td class="n">20</td><td class="w">Late December</td>
+<td class="t">The coat</td>
+<td class="h">Two weeks of waiting, like waiting for a sentence. Every night she thinks of running, and every morning she stays, because she has begun to love the place. She wears Amos's old barn coat, the warmest thing in the house. She decides to catch the tractor ghost, and waits in the dark by the river field.</td>
+<td class="true">She expects the paper to say "no relation", and the family to start digging.</td>
+<td class="bel">She is afraid the test may go against her. Tonight she will catch Julian, or Wade.</td>
+<td class="clue">The coat, which she will wear for a year.</td>
+<td class="cliff">A figure is standing among the trees with something small in his hand. She steps out and says: "Teddy."</td>
+</tr>
+<tr>
+<td class="n">21</td><td class="w">Late December, night</td>
+<td class="t">The ghost</td>
+<td class="h">Teddy breaks down. He owes money to dangerous people. He has signed an option with Julian's company and already spent the fee. If she leaves, the farm goes to the children. Each evening he took the tractor out of gear and switched on its lights, and in the night he pressed his remote from the trees.</td>
+<td class="true">All true. And he copied the scene from memory. He saw it on the morning his father died.</td>
+<td class="bel">The kind one was the ghost. It was the family all along.</td>
+<td class="clue">June: "He has made it look exactly like the morning his father died. I do not ask him how he knows what that morning looked like. I should have asked."</td>
+<td class="cliff">Teddy: "Mrs. Pruitt told me you are not her. She saw the real girl's photograph years ago."</td>
+</tr>
+<tr>
+<td class="n">22</td><td class="w">Late December</td>
+<td class="t">The bargain</td>
+<td class="h">June cannot report him. She cannot afford a public quarrel in which that sentence is repeated, and she pities him. She holds out her hand, and he puts the remote in it. "If that engine starts again, I will know where to send the sheriff." She drops it into the pocket of Amos's coat. The nights are quiet now.</td>
+<td class="true">Teddy's sentence is simply true, and it terrifies her. The receiver stays wired into the tractor.</td>
+<td class="bel">The haunting is solved, and the housekeeper's story is an old woman's spite. So what is the rest of the book about?</td>
+<td class="clue">The remote in the coat pocket. Nobody removes the receiver from the tractor.</td>
+<td class="cliff">The court telephones. The judge has the envelope, and everyone is to come at ten tomorrow.</td>
+</tr>
+<tr>
+<td class="n">23</td><td class="w">Early January</td>
+<td class="t">The envelope opened</td>
+<td class="h">The judge opens the envelope in front of everyone. The laboratory says that the woman known as Nora Bell is the biological granddaughter of Amos Hale. Colleen is beaten. Wade walks out. Teddy is confused. Lang tells the children he is sorry, and gives June a short nod: "The allowance continues, Miss Bell."</td>
+<td class="true">The result is genuine. Lang believes his money bought it. June believes it is impossible.</td>
+<td class="bel">She has won, and she really is the granddaughter.</td>
+<td class="clue">June: "I hear the words and I cannot make them mean anything."</td>
+<td class="cliff">The judge: "The court finds that she is the heir."</td>
+</tr>
+<tr>
+<td class="n">24</td><td class="w">Early January, the same day</td>
+<td class="t">Somebody has lied</td>
+<td class="h">At the farm Mrs. Pruitt hears the news and drops the dish she is holding. June sits alone in Amos's study as it gets dark.</td>
+<td class="true">Mrs. Pruitt is right that this is not the girl in the photograph. June is right to be afraid, but wrong about why the paper says yes.</td>
+<td class="bel">Why is she frightened by good news? Something is badly wrong.</td>
+<td class="clue">Mrs. Pruitt: "Then somebody has lied to the judge."</td>
+<td class="cliff">"The paper says I am Amos Hale's granddaughter. I should be the happiest woman in the county. I have never been so frightened in my life."</td>
+</tr>
+<tr class="part"><td colspan="8">PART TWO: "JUNE" &middot; chapters 25 to 40 &middot; June's voice</td></tr>
+<tr>
+<td class="n">25</td><td class="w">Early January, that night</td>
+<td class="t">My name is not Nora Bell</td>
+<td class="h">June tells the reader everything: her real name, the trade of names with her dying roommate, the death certificate, the six years. The lawyers traced Nora, not her, so the paper cannot be true. Somebody has reached inside a court's laboratory. She says that Nora spoke a few words at the very end, which she took for kindness. She does not repeat them.</td>
+<td class="true">Everything she says is true, as far as she knows. She does not know that Nora was her sister.</td>
+<td class="bel">She is an impostor with no link to the family, and someone falsified the test to keep her on the farm.</td>
+<td class="clue">She is adopted and has never looked for her birth family. Nora's last words are held back.</td>
+<td class="cliff">"Somebody knows what I am. And he wants me to stay."</td>
+</tr>
+<tr>
+<td class="n">26</td><td class="w">Early January</td>
+<td class="t">Who gains</td>
+<td class="h">She makes a bookkeeper's list of who gains from a "yes". Not the children. Their coalition falls apart: Colleen goes back to the city, Wade says nothing, Teddy avoids her. One name is left: Julian, who has money and has spent weeks charming a poor waitress. She goes to his house to accuse him.</td>
+<td class="true">Julian did not touch the test.</td>
+<td class="bel">Julian falsified the test, to keep the easiest seller he could wish for.</td>
+<td class="clue">Her method: ask who gains. Later she will ask it about a death.</td>
+<td class="cliff">Through his open door she hears him on the telephone: "She passed. No. It changes the timetable, that's all."</td>
+</tr>
+<tr>
+<td class="n">27</td><td class="w">Early January</td>
+<td class="t">Paid to wait</td>
+<td class="h">Julian does not get angry. He shows her the options signed by Colleen and Teddy, and explains. With them he had two signatures and a court case he could not lose. With her he has one owner who may never sell. "Why would I commit a crime to exchange a certainty for a hope?" Then: "I am guilty of plenty where you are concerned. I am not guilty of that test."</td>
+<td class="true">It is exactly as he says. The "timetable" was his company's schedule.</td>
+<td class="bel">He is innocent of the test, and honest in his own hard way.</td>
+<td class="clue">A court can order the whole farm sold. This is why Wade will need her.</td>
+<td class="cliff">"If it was not Julian, it is someone I have not thought of. Someone I see every day."</td>
+</tr>
+<tr>
+<td class="n">28</td><td class="w">Mid-January</td>
+<td class="t">The desk<br><span class="new">added scene</span></td>
+<td class="h">June searches Amos's study for the photograph that Teddy spoke of. In the diary, seven years back, in Mrs. Pruitt's hand: "Letter came from Carol's girl. Photograph enclosed. He would not look at it. I looked." The desk is empty. A copy of the estate's list says: "Desk, personal letters: removed to the executor's office."</td>
+<td class="true">Lang took the letter and the photograph on purpose. They are in his safe.</td>
+<td class="bel">A photograph of the real Nora exists, and it could destroy her.</td>
+<td class="clue">The photograph is with Lang, by a perfectly official route.</td>
+<td class="cliff">"It is lying in a lawyer's filing cabinet, and I have to hope he never looks at it."</td>
+</tr>
+<tr>
+<td class="n">29</td><td class="w">Mid-January</td>
+<td class="t">Nora<br><span class="new">added scene</span></td>
+<td class="h">June remembers the year with Nora: the small flat, the clinic where the staff confused them, and the offer: "My name is clean and I have six months. Yours is ruined and you have fifty years. Let's trade." She takes out the small brass key that Nora left her.</td>
+<td class="true">Nora was her sister and had searched for her. The bank box holds the adoption papers and a letter.</td>
+<td class="bel">A sad and generous friendship. The key is a keepsake.</td>
+<td class="clue">People confused the two women. Nora: "There are things in there about where I come from. Open it when you want to know. Not before."</td>
+<td class="cliff">Downstairs Mrs. Pruitt is on the telephone. June hears one sentence: "No. I will not be put off again."</td>
+</tr>
+<tr>
+<td class="n">30</td><td class="w">Mid-January</td>
+<td class="t">A Hale<br><span class="new">added scene</span></td>
+<td class="h">Wade speaks to her properly for the first time. If she is a Hale, she can learn to carry a bucket. He shows her the cattle and the fields. He admits he is glad the answer was yes. If it had been no, his brother and sister would have had the farm sold within a year.</td>
+<td class="true">Wade needs her as owner. Mrs. Pruitt was speaking to Lang's office, and was put off once more.</td>
+<td class="bel">Her enemy is turning into something else. She is safer than she was.</td>
+<td class="clue">Wade's real interest: only her staying keeps the farm whole.</td>
+<td class="cliff">A knock on her bedroom door that night. Mrs. Pruitt: "I want a word with you, whoever you are."</td>
+</tr>
+<tr>
+<td class="n">31</td><td class="w">Late January, a Friday night</td>
+<td class="t">The photograph</td>
+<td class="h">Mrs. Pruitt says everything. Seven years ago a girl wrote to Mr. Hale and enclosed her photograph: dark hair, a mole on her cheek, a crooked front tooth. "You could be her cousin. You are not her." She told Mr. Lang in the first week. He said a housekeeper's memory was not evidence, and that she could lose her place. So she waited for the test. Now the photograph has gone from the desk.</td>
+<td class="true">All true. Lang kept her silent with a threat and a promise.</td>
+<td class="bel">The old woman has been right from the first day. June is finished.</td>
+<td class="clue">"You told the Tanner boy you never heard Mr. Hale's name. The girl who wrote that letter knew it well enough." And: "I saw who came up the lane on the morning Mr. Hale died, and I held my tongue for love. I will not hold it for you."</td>
+<td class="cliff">"On Monday I am going to Miss Colleen's lawyer. Let him take your fingerprints, and we shall see who you are."</td>
+</tr>
+<tr>
+<td class="n">32</td><td class="w">Late January, Friday and Saturday</td>
+<td class="t">Fingerprints</td>
+<td class="h">June begs her to wait, and they quarrel loudly. Teddy is in the kitchen below and hears every word, including the words about the lane. Fingerprints would lead straight to June Mercer's prison record. Saturday passes in silence. June goes to bed.</td>
+<td class="true">On Saturday Mrs. Pruitt telephones Lang at his fishing cabin and tells him about Monday. He drives back through the night.</td>
+<td class="bel">Teddy now knows that Mrs. Pruitt may speak about "that morning". June may run.</td>
+<td class="clue">"Some time after two I hear an engine on the lane, or I dream it."</td>
+<td class="cliff">On Sunday morning the cellar door is standing open.</td>
+</tr>
+<tr>
+<td class="n">33</td><td class="w">Late January, Sunday morning</td>
+<td class="t">The cellar stairs</td>
+<td class="h">Mrs. Pruitt lies dead at the bottom of the steep cellar stairs. June calls the sheriff. Teddy arrives and weeps like a son. The sheriff is slow and careful.</td>
+<td class="true">Lang came into the cellar through the two outside doors behind the house. She heard him, unhooked the kitchen door of the cellar and stood on the top step. He pulled her down, and was back at his cabin before dawn.</td>
+<td class="bel">One of the children has killed the woman who saw them that morning. Probably Teddy, who heard her say it.</td>
+<td class="clue">She had gone up and down those stairs for forty years.</td>
+<td class="cliff">Teddy, frightened, to the sheriff: "They were shouting on Friday night. She said she was going to a lawyer about her. About Nora."</td>
+</tr>
+<tr>
+<td class="n">34</td><td class="w">Late January, the same Sunday</td>
+<td class="t">Don't leave the county</td>
+<td class="h">Colleen arrives and screams that the stranger has murdered the one person who doubted her. The sheriff tells June, politely, not to leave the county. He will speak to everyone, including the executor, "who is up at his cabin until tonight".</td>
+<td class="true">The alibi is being placed in front of everyone. It is true, and it is worthless.</td>
+<td class="bel">June is in danger of being blamed for another person's crime.</td>
+<td class="clue">Lang was four hours away.</td>
+<td class="cliff">Wade, alone with her in the yard: "Did you push her?" "No." "Somebody did."</td>
+</tr>
+<tr>
+<td class="n">35</td><td class="w">Late January</td>
+<td class="t">For elimination<br><span class="new">added scene</span></td>
+<td class="h">The sheriff comes back. Mrs. Pruitt made one telephone call on Saturday, to Mr. Lang. Lang says she was upset about the heir, as she had been all year, and that he told her she was free to see a lawyer on Monday. The sheriff says that if this goes any further he will need everybody's fingerprints, "for elimination".</td>
+<td class="true">Lang gave an innocent account of the call, because the telephone record would show it.</td>
+<td class="bel">The net is closing on June. Lang looks like a man who gave proper advice.</td>
+<td class="clue">Lang knew, on Saturday, what Mrs. Pruitt meant to do on Monday.</td>
+<td class="cliff">"Everybody's fingerprints. One night in his cells, and June Mercer comes back from the dead."</td>
+</tr>
+<tr>
+<td class="n">36</td><td class="w">First days of February</td>
+<td class="t">The funeral<br><span class="new">added scene</span></td>
+<td class="h">Mrs. Pruitt is buried. The whole county looks at June. Lang is back, dry and correct. Julian stands at the back. Teddy is drunk.</td>
+<td class="true">Teddy is afraid that Mrs. Pruitt told June he was at the farm that morning.</td>
+<td class="bel">Teddy is the voice of the prologue, and perhaps a double killer.</td>
+<td class="clue">His fear is about "that morning", not about the stairs.</td>
+<td class="cliff">Teddy grips her arm: "She told you, didn't she? What did she tell you about that morning?"</td>
+</tr>
+<tr>
+<td class="n">37</td><td class="w">Early February</td>
+<td class="t">The form</td>
+<td class="h">June does the arithmetic of her position and decides to give everything up. If she refuses the inheritance, the farm goes to the children, and nobody has a reason to look at her. She packs her own suitcase. The paper is called a renunciation, and it must be given to the executor. She drives to town at closing time.</td>
+<td class="true">She is walking into the office of the one man who cannot let her leave.</td>
+<td class="bel">She is right to run. It is over.</td>
+<td class="clue">She goes to Lang as an official, not as a friend.</td>
+<td class="cliff">"There is one lighted window in the whole street. It is his."</td>
+</tr>
+<tr>
+<td class="n">38</td><td class="w">Early February, the same evening</td>
+<td class="t">Sit down</td>
+<td class="h">She tells Lang she wants to sign and go. "A renunciation cannot be undone, Miss Bell. I am obliged to tell you to think again." She says she has thought. He takes a form from his drawer and takes the cap off his pen. Then he puts the cap back on, gets up, closes the door and turns the key.</td>
+<td class="true">He has known her name since before she arrived. He chose her because she is a fraud.</td>
+<td class="bel">Until the last line: a dull formality.</td>
+<td class="clue">Everything dull about him for thirty-seven chapters, starting with Sam's joke on the bus: "Bring a sandwich."</td>
+<td class="cliff">"Sit down, June."</td>
+</tr>
+<tr>
+<td class="n">39</td><td class="w">Early February, the same evening</td>
+<td class="t">Three photographs</td>
+<td class="h">He lays three photographs on the desk: the dark girl with the mole, the waitress, and June Mercer's prison photograph. She will stay and be Nora Bell until the court gives her the farm. That day she will sell it for $4 million to a buyer he names, and go. If she refuses, the photographs go to the sheriff. Of the test: "I made sure of the answer." Of Mrs. Pruitt: he was four hours north with a fishing rod. He will speak to the sheriff for her.</td>
+<td class="true">His money bought nothing, because the test was genuine. He killed Mrs. Pruitt and Amos. He does not intend to pay her or to let her live.</td>
+<td class="bel">He is a blackmailer who feeds on other people's crimes. He is not a killer. The killer is a Hale.</td>
+<td class="clue">"This family does its own dying, Miss Mercer. I only keep the books." And: "You have been in this trade longer than I have."</td>
+<td class="cliff">"I say yes. Of course I say yes."</td>
+</tr>
+<tr>
+<td class="n">40</td><td class="w">Early February, that night</td>
+<td class="t">The buyer</td>
+<td class="h">That night she works it out alone. Nobody goes to this trouble for a lawyer's fee. The buyer is Lang himself, behind a company: $4 million for land that one company wants for $80 million. She is almost relieved. The man in the shadows has a face, and what he wants is money.</td>
+<td class="true">She has understood the fraud and missed the murders.</td>
+<td class="bel">She is trapped, but safe as long as she obeys. The killer is still one of the children.</td>
+<td class="clue">Her relief. It is the mistake Lang wants her to make.</td>
+<td class="cliff">"For the first time in my life I am exactly what they said I was."</td>
+</tr>
+<tr class="part"><td colspan="8">PART THREE: "THE BARGAIN" &middot; chapters 41 to 52 &middot; June's voice</td></tr>
+<tr>
+<td class="n">41</td><td class="w">February, to 1 March</td>
+<td class="t">An accident</td>
+<td class="h">Lang keeps his word. Mrs. Pruitt's death is recorded as an accident, and the sheriff stops calling. It is winter. With no housekeeper, June has to light the stove and carry the wood herself. She tells herself the old stories: the children are rich already, and life owes her three years.</td>
+<td class="true">Lang has protected his heir, not June.</td>
+<td class="bel">She has made her bargain with the devil, and it seems to be holding.</td>
+<td class="clue">How easily Lang turned the sheriff.</td>
+<td class="cliff">Lang telephones on the first day of the month and says one word: "Eight." It is the number of months she still has to serve.</td>
+</tr>
+<tr>
+<td class="n">42</td><td class="w">March</td>
+<td class="t">Perfect books</td>
+<td class="h">June reads the estate's accounts, as she has the right to. She looks for small thefts, out of habit, and finds none. Every dollar is in its place. Then Colleen comes to the farm, thin and desperate.</td>
+<td class="true">Lang steals nothing, because he is waiting for everything. Colleen's debts are about to swallow her.</td>
+<td class="bel">Lang is exactly as careful as he seems.</td>
+<td class="clue">"A man who steals small amounts is content with small amounts. This man is waiting for one single number."</td>
+<td class="cliff">Colleen: "Half a million dollars. Borrowed. Tonight. You leave before your year is up, and you never come back."</td>
+</tr>
+<tr>
+<td class="n">43</td><td class="w">March</td>
+<td class="t">Owned<br><span class="new">added scene</span></td>
+<td class="h">It is the way out she wanted in chapter 37, and she cannot take it. She telephones Lang. He says: "No." She refuses Colleen and watches her face.</td>
+<td class="true">She is not his partner. She is his property.</td>
+<td class="bel">June is now doing real harm to people who have a real claim.</td>
+<td class="clue">Lang refuses a solution that would make everyone happy except him.</td>
+<td class="cliff">Colleen: "So you are exactly what I thought you were." June: "Yes. For the first time, I am."</td>
+</tr>
+<tr>
+<td class="n">44</td><td class="w">Early April, 3 in the morning</td>
+<td class="t">Calving<br><span class="new">added scene</span></td>
+<td class="h">Early spring. At three in the morning Wade needs a second pair of hands with a cow in trouble, and there is nobody else. June kneels in the straw and does what he tells her. Something in her attaches itself to the place.</td>
+<td class="true">This is the first night she belongs anywhere.</td>
+<td class="bel">She is becoming a Hale just as she prepares to sell the Hales out.</td>
+<td class="clue">Wade teaches her, without one kind word.</td>
+<td class="cliff">Wade, washing his arms: "Come up to my house tomorrow. There is something I want to put to you."</td>
+</tr>
+<tr>
+<td class="n">45</td><td class="w">Early April, the next day</td>
+<td class="t">Wade's offer</td>
+<td class="h">Wade explains his position. If she fails, a court sells the farm, and he gets $26 million "and nowhere to stand". If she sells to the data centre, the farm is gone too. So: "When it is yours, do not sell. Rent me the land. I will pay you every year for the rest of your life, and I will farm it for myself at last."</td>
+<td class="true">It is the only honest offer anyone makes her. She will accept it on the last page.</td>
+<td class="bel">There is a decent way out, and she cannot take it.</td>
+<td class="clue">Wade does not want money. He wants to own his own work.</td>
+<td class="cliff">"I tell him I will think about it. Lying to Wade is the first thing in the whole bargain that truly hurts."</td>
+</tr>
+<tr>
+<td class="n">46</td><td class="w">June and July</td>
+<td class="t">Only dirt<br><span class="new">added scene</span></td>
+<td class="h">Summer. Wade teaches her to drive the old tractor: the clutch, the gears, the brake that does nothing, and the rule that you always leave her in gear. She mows her first field alone. On cool mornings she still wears Amos's coat, and her fingers find the little remote in the pocket. She keeps meaning to throw it away.</td>
+<td class="true">She now knows the machine, the gear lever and the field.</td>
+<td class="bel">She is happy, and it cannot last.</td>
+<td class="clue">She can work the gear lever without looking. The remote is still in the coat.</td>
+<td class="cliff">Lang's car stops on the lane. He watches her on the tractor and says through the window: "Do not grow attached, Miss Bell. It is only dirt."</td>
+</tr>
+<tr>
+<td class="n">47</td><td class="w">August</td>
+<td class="t">A small worry</td>
+<td class="h">One question will not leave her: who gained from Mrs. Pruitt's death? She did. Lang gained exactly as much. But he was four hours away, and the sheriff checked. She visits Ruth Tanner.</td>
+<td class="true">The fishing cabin proves nothing. He was seen in the afternoon and in the morning, not in the night.</td>
+<td class="bel">It was Teddy. Or was it?</td>
+<td class="clue">The bookkeeper's question, asked about a death.</td>
+<td class="cliff">Ruth: "Agnes Pruitt told me once that she saw something on the morning Amos died. She would not say what. She said it was not hers to tell."</td>
+</tr>
+<tr>
+<td class="n">48</td><td class="w">Early September</td>
+<td class="t">One strip</td>
+<td class="h">Late summer. Wade is plowing the river field again. He shows June the sheriff's photographs and tells her what has troubled him for a year: "He had plowed one strip when I found him at four. He was in his fields at first light every day of his life. What was he doing all day?" June reads the hour meter in a photograph, from habit, and fetches the diary.</td>
+<td class="true">The tractor ran from dawn. Amos was dead ten minutes after he began.</td>
+<td class="bel">At last, the murder. Which of the children?</td>
+<td class="clue">One plowed strip. The last diary entry, written the evening before.</td>
+<td class="cliff">"The number in the photograph is eleven hours higher."</td>
+</tr>
+<tr>
+<td class="n">49</td><td class="w">Early September</td>
+<td class="t">Eleven hours</td>
+<td class="h">She tells Wade what the numbers say, and no more. The engine started at five in the morning and never stopped, but it did ten minutes of work. The eleven hours exceed anything the afternoon story can explain. Wade adds that nobody else touched the tractor, and that his father never let an engine run without working. Something stopped Amos at dawn.</td>
+<td class="true">It is not proof. It is the first crack in an alibi that was built on purpose.</td>
+<td class="bel">The time of death was wrong. Then every alibi is wrong.</td>
+<td class="clue">Lang's alibi covers the afternoon. Nobody ever asked about the dawn, because he told them himself.</td>
+<td class="cliff">"'I saw Mr. Hale at first light on the day he died.' He said it to me beside a bench in a hallway, on my first morning, and I didn't hear it."</td>
+</tr>
+<tr>
+<td class="n">50</td><td class="w">Mid-September</td>
+<td class="t">You were there</td>
+<td class="h">June remembers what she did not ask: Teddy's ghost showed the death as it looked at dawn. She goes to him with the diary: "You were there." He breaks. He is the voice of the prologue. He tells her about the quarrel in the tavern, the drinking, the body, the footprints, and the ten hours he left his father in a field. Mrs. Pruitt saw his car and never told.</td>
+<td class="true">He found the body and ran. He killed nobody.</td>
+<td class="bel">For a few pages: Teddy killed his father, and then the old woman who protected him.</td>
+<td class="clue">Mrs. Pruitt once told him: "What a man does in his grief is forgiven."</td>
+<td class="cliff">Teddy: "In forty years I never met a car on that lane before six in the morning. That morning I met one coming out."</td>
+</tr>
+<tr>
+<td class="n">51</td><td class="w">Mid-September</td>
+<td class="t">The last cost</td>
+<td class="h">June thinks it through. Lang killed Amos, just when Amos wanted to travel north and have her blood tested. He left the engine running so that the death would look fresh, and went to sit in front of a judge. The fishing cabin is the same kind of alibi. After the signing, only one living person will know what he has done.</td>
+<td class="true">She is right about everything except her own blood.</td>
+<td class="bel">The grey lawyer did it all.</td>
+<td class="clue">Both alibis are true, and both were built.</td>
+<td class="cliff">"The four million was never real. The day I sign is the day I die."</td>
+</tr>
+<tr>
+<td class="n">52</td><td class="w">Late September</td>
+<td class="t">Until October</td>
+<td class="h">She tells Wade everything, including that she is not Nora Bell. He is silent for a long time, and then he does the arithmetic. They cannot go to the sheriff: a convict under a false name, a drunk who ran away, and numbers that show a time but not a killer. June makes a plan built on Lang's one mistake: he thinks she is a thief. The reader is told only that there will be letters, and that Wade and Teddy each get a job. She puts the remote back into Teddy's hand.</td>
+<td class="true">The full plan: the letters; Wade obeys Lang and hides a telephone; Teddy leaves his car at the tavern and waits in the trees; June plays the thief and leads Lang to the tractor.</td>
+<td class="bel">They have a plan, and it rests on the weakest man in the county.</td>
+<td class="clue">Wade: "If you are a fraud, I lose the farm. Until October you are my niece."</td>
+<td class="cliff">"The whole plan now depends on the family coward."</td>
+</tr>
+<tr class="part"><td colspan="8">PART FOUR: "EVERETT" &middot; chapters 53 to 55 &middot; Lang's voice</td></tr>
+<tr>
+<td class="n">53</td><td class="w">Early November, about ten days after her year ended: the last day</td>
+<td class="t">Two photographs</td>
+<td class="h">Lang's voice. It is the last day, and this afternoon the judge signed the farm over to her. He remembers putting two photographs side by side, and understanding that a false heir was worth $76 million to him. He remembers telling Amos only: "We found her."</td>
+<td class="true">This is the truth, from the only man who knows it. He is wrong about one thing: she is not a false heir.</td>
+<td class="bel">Now we are inside him, and he is worse than we thought.</td>
+<td class="clue">His contempt: "a thief who was stupid enough to be caught".</td>
+<td class="cliff">"Then Amos told me he wanted to see her with his own eyes."</td>
+</tr>
+<tr>
+<td class="n">54</td><td class="w">The last day (he remembers the year)</td>
+<td class="t">First light</td>
+<td class="h">He remembers the dawn: the old man climbing down because he thought his lawyer had brought papers; the wrench, which he dropped into the old well; the wheel; the engine left running; the car on the lane, and his decision to speak about the visit openly; the day in court. Then the man at the laboratory. Then Mrs. Pruitt's telephone call, the night drive from the cabin, and the cellar stairs.</td>
+<td class="true">All true. He does not know that his money at the laboratory bought nothing.</td>
+<td class="bel">Every question is answered. (One is not.)</td>
+<td class="clue">"I paid him to make it say yes." He never asks what it said by itself.</td>
+<td class="cliff">"She said my name on the top step, as if I had come to help her."</td>
+</tr>
+<tr>
+<td class="n">55</td><td class="w">The last evening</td>
+<td class="t">Tonight</td>
+<td class="h">He goes through the evening. At eight he telephones the sale yard: Wade's truck is there, two counties away. He drives past the tavern: Teddy's car is outside, as on every night for twenty years. The boards over the old well are loose. There is a pistol in his coat, "for the walk and not for use". Her suitcase will go into his car, and her car will be left at the bus station.</td>
+<td class="true">Wade has obeyed on purpose. Teddy's car is a decoy, and Teddy is walking across the fields.</td>
+<td class="bel">The plan has failed. June is alone.</td>
+<td class="clue">He has checked everything except the woman.</td>
+<td class="cliff">"The lane is empty this time. I looked."</td>
+</tr>
+<tr class="part"><td colspan="8">PART FIVE: "JUNE MERCER" &middot; chapters 56 to 60 &middot; June's voice</td></tr>
+<tr>
+<td class="n">56</td><td class="w">The last evening</td>
+<td class="t">The last evening</td>
+<td class="h">Lang arrives two hours early and takes her telephone. Her suitcase is packed by the door again, and this time she knows who packed it. In Amos's study she signs two papers: the sale to Hale River Holdings for $4 million, and a note he dictates: "I have sold the farm and I am leaving. Do not look for me." Then she does not get up. She says four million is not enough, and she wants half. Teddy passed him on the lane. The tractor ran eleven hours. She has the diary page and the photograph, and she has hidden them.</td>
+<td class="true">She is playing the thief he believes she is. A second telephone in the coat is recording. The papers are in the tractor's toolbox, which is where she wants him to go.</td>
+<td class="bel">She has lost her mind, or she is greedier than we knew.</td>
+<td class="clue">He does not think to look for a second telephone.</td>
+<td class="cliff">He takes the pistol from his coat. "Show me."</td>
+</tr>
+<tr>
+<td class="n">57</td><td class="w">The last night</td>
+<td class="t">The river field</td>
+<td class="h">They walk out in the dark, and he talks, because he believes she will be dead within the hour. "He climbed down for me, you know. He thought I had brought him papers." At the tractor nothing moves among the trees. She climbs onto the step and hands him the pages from the toolbox. "Come down." She understands that light and noise will not stop this man. Her hand is on the gear lever she has used all summer. She pushes it into gear and shouts: "Teddy! Now!"</td>
+<td class="true">Teddy is in the trees. He has called the sheriff, and he has frozen, as he froze a year ago. Lang is standing in front of the rear wheel.</td>
+<td class="bel">Teddy is in the tavern. She is about to die.</td>
+<td class="clue">Everything planted earlier: the gear, the safety switch, the remote, the coat.</td>
+<td class="cliff">Nothing happens. Lang smiles: "Teddy is where he is every night." One second passes, and another.</td>
+</tr>
+<tr>
+<td class="n">58</td><td class="w">The last night, and the days after</td>
+<td class="t">The engine</td>
+<td class="h">The engine starts. The tractor is in gear and lurches forward. The wheel takes Lang down, and the pistol fires once into the air. Teddy comes out of the trees: "Then you called my name." He switches the engine off. The sheriff arrives. June's first words: "My name is June Mercer. I put the tractor in gear. Teddy did not know." She is held for three days. The evidence: the pistol, her suitcase in his car, the note, the loosened well and the wrench at the bottom of it, two recordings, her letters posted that morning, the three photographs in his safe, and Julian's statement.</td>
+<td class="true">The plan was Teddy's light and noise. The gear was June's alone.</td>
+<td class="bel">She will go to prison, for the name if not for the death.</td>
+<td class="clue">She takes the blame herself. It is the opposite of what was done to her.</td>
+<td class="cliff">The district attorney calls it self-defence. Then: "A man from the laboratory has asked to see the judge."</td>
+</tr>
+<tr>
+<td class="n">59</td><td class="w">November</td>
+<td class="t">Already yes</td>
+<td class="h">The man from the laboratory is terrified and wants one thing known: "Mr. Lang paid me to make it say yes. I ran the samples first, to see how much I would have to change. I did not have to change anything. It was already yes." A second laboratory agrees. The judge opens June's closed adoption file. The will says "the living child of my daughter Carol Bell", not "Nora". She inherits in her own name. Colleen's last challenge fails.</td>
+<td class="true">Lang killed twice to hide a lie that was never a lie. June spent a year believing she was stealing what was hers.</td>
+<td class="bel">But how can she be Carol's child?</td>
+<td class="clue">The will, written by blood, in chapter 4.</td>
+<td class="cliff">"The file names my mother. It is the name of Nora's mother. I take the brass key out of my pocket."</td>
+</tr>
+<tr>
+<td class="n">60</td><td class="w">November and December</td>
+<td class="t">Dear June</td>
+<td class="h">The bank opens the box: her adoption papers, their grandmother's letters, and a letter that begins "Dear June". Nora was the younger sister, the one who was kept. She found June on purpose and was too afraid to say it. Only now do we hear her last words: "You were always my sister." June had answered: "You too." June pleads guilty to the false name and is given probation, because she came forward. She keeps the farm and rents the land to Wade. Julian is still paid to wait.</td>
+<td class="true">All her life she hated the sister who was kept. That sister gave her everything she had.</td>
+<td class="bel">Nothing is left to correct.</td>
+<td class="clue">None. Every clue is now paid off.</td>
+<td class="cliff">The last line: "For the first time in six years I write my own name: June Mercer."</td>
+</tr>
+
+</tbody>
+</table>
+
+<p class="sub">The notes that used to stand below this table (who the reader suspects, the calendar with seasons and clothes, open questions, the numbers, checks) are now in their own file: <code>chapter-table-notes.html</code>.</p>
+
+</div>
+</body>
+</html>
